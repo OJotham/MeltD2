@@ -1,6 +1,5 @@
 from django.contrib import admin
-from mptt.admin import MPTTModelAdmin
-from songr.models import PlaylistUpload, User
+
+from songr.models import PlaylistUpload
 
 admin.site.register(PlaylistUpload)
-admin.site.register(User, MPTTModelAdmin)
