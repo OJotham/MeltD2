@@ -1,0 +1,8 @@
+{% extends "songr/base.html" %}
+
+{% block content %}
+  <h3>Be part of the fun. Join Rollit Today.</h3>
+  <p class="lead">Have the DJ play your favorite song</p>
+  <a href="{% url 'dejay_signup' %}" class="btn btn-primary btn-lg" role="button">I'm a Dejay</a>
+  <a href="{% url 'reveler_signup' %}" class="btn btn-primary btn-lg" role="button">Just Having Fun</a>
+{% endblock %}

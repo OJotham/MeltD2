@@ -1,0 +1,31 @@
+{% extends "songr/base.html "%}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<body>
+	<legend class="border-bottom mb-4"><h1>{{ user.username }}</h1></legend>
+
+	<ul class="list-inline border-bottom mb-4 pb-4">
+		<li class="list-inline-item col-sm-2 ">playlists </li>
+  	<li class="list-inline-item col-sm-2 ">following </li>
+  	<li class="list-inline-item col-sm-2 ">followers </li>
+  	<li class="list-inline-item col-sm-2 ">Likes </li>
+	</ul>
+
+			<h3>Song Upload</h3>
+
+			<form enctype="multipart/form-data" method="POST" action="">
+			{% csrf_token %}
+			{{ form.as_p }}
+		   <!-- <input type="file" name="song_file" multiple/> -->
+		   <input type="submit" class="btn btn-primary col-md-4 py-2" value="upload"/>
+			</form>
+
+			<p>Sentiment</p>
+			{{ songcart.songs.all }}
+
+	
+
+	</body>
+{% endblock content %}

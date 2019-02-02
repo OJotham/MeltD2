@@ -1,0 +1,22 @@
+{% extends "songr/base.html "%}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<div class="row">
+    <div class="col-md-8 col-sm-10 col-12">
+      <!-- <h2>Sign up as a Reveler and get the most out of your DJ</h2> -->
+      <form method="POST" novalidate>
+        {% csrf_token %}
+        <fieldset class="form-group">
+        	<legend class="border-bottom mb-4">Sign up as a Reveler and get the most out of your DJ</legend>
+        	<!-- <input type="hidden" name="next" value="{{ next }}"> -->
+        	{{ form|crispy }}
+        </fieldset>
+        <div class="row justify-content-md-center">  
+        <button type="submit" class="btn btn-success col-md-8">Sign up</button>
+    	</div>
+      </form>
+    </div>
+</div>
+{% endblock content %}
